@@ -5,10 +5,15 @@
     <br>
     <table class="table table-hover">
         <tr>
-            <td>
-                <br>
-                <span id="post1">This is my one and only blog post. Can you add more using a for loop?</span>
-            </td>
+            <table>
+                {% for i in range(10) %}
+                    <tr>
+                        <td>
+                            <span id="post{{ i+1 }}">This is blog post number {{ i+1 }}.</span>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>                               
         </tr>
     </table>
     <nav aria-label="...">
